@@ -1,2 +1,2 @@
 # someUbuntuSetup
-Initial setup after installin xubuntu 18.04
+Initial setup after installing xubuntu 18.04
