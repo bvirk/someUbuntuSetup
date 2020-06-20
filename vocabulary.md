@@ -1,0 +1,4 @@
+- List of files in package
+	- dpkg-query -L <package_name>
+- List all installed packages
+	- apt list --installed
