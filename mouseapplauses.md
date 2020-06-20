@@ -41,7 +41,7 @@ Getting a modeline for wanted resolution - eg. 1280 wide(x) and 1024 high(y)
 
 	$ cvt 1280 1024
 	
-	$ lscat ~/nonamebin/newvid 
+	$ lscat ~/bin/newvid 
 	perm= -rwxrwxr-x owner= bvirk group= bvirk
 		 xrandr --newmode  "1280x1024_60.00"  109.00  1280 1368 1496 1712  1024 1027 1034 1063 -hsync +vsync
 		 xrandr --addmode  VGA1 "1280x1024_60.00"
@@ -77,7 +77,7 @@ Add to Application->settings->sessions and startup
 	echo 
 	}
 
-### [workaround - free console under mc](https://unix.stackexchange.com/questions/182925/dconf-warning-failed-to-commit-changes-to-dconf-the-connection-is-closed)
+### [mousepad workaround and 'free' console under mc](https://unix.stackexchange.com/questions/182925/dconf-warning-failed-to-commit-changes-to-dconf-the-connection-is-closed)
 	
 	p$ lscat /usr/local/bin/mousepadWA 
 	perm= -rwxr-xr-x owner= root group= root
@@ -110,8 +110,8 @@ Add to Application->settings->sessions and startup
 	- +lynx-like motion
 - option appearence
 	- chose double lines for root
-- option save setup
-	- IMPORTANT TO KEEP SETTINGS
+- option save setup __important to keep settings__
+	- invoke
 
 ### hints to identify desktop gui items in Applications
 
