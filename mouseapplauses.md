@@ -77,7 +77,7 @@ Add to Application->settings->sessions and startup
 	echo 
 	}
 
-[workaround - free console under mc](https://unix.stackexchange.com/questions/182925/dconf-warning-failed-to-commit-changes-to-dconf-the-connection-is-closed)
+## [workaround - free console under mc](https://unix.stackexchange.com/questions/182925/dconf-warning-failed-to-commit-changes-to-dconf-the-connection-is-closed)
 	
 	p$ lscat /usr/local/bin/mousepadWA 
 	perm= -rwxr-xr-x owner= root group= root
@@ -119,7 +119,28 @@ Add to Application->settings->sessions and startup
 	- settings->panel-items
 		- workspace switcher
 
-## [installing apache, mysql, php]()
+## [installing apache, mysql, php](https://www.configserverfirewall.com/ubuntu-linux/install-apache-php-mysql-ubuntu-18/)
+
+	...
+	head -n 2 /etc/apache2/apache2.conf 
+	## added 20200618
+	Include /etc/phpmyadmin/apache.conf 
+
+## [add mysql user](https://alvinalexander.com/blog/post/mysql/add-user-mysql/)
+user: 'til' with password 'tilpas' is given database 'tilladt'
+
+- login as mysql user root
+	- $ sudo mysql
+- create a database
+	- mysql> create database tilladt;
+- create usr and give access to database
+	- mysql> GRANT ALL PRIVILEGES ON tilladt.* TO 'til'@'localhost' IDENTIFIED BY 'tilpas' WITH GRANT OPTION;
+- commit
+	- flush privileges;
+- logout for mysql user root
+	- quit
+
+
 
 
 
