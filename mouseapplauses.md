@@ -1,16 +1,16 @@
-# Story of convenient initial settings in xubuntu 18.04
+### Story of convenient initial settings in xubuntu 18.04
 
-##### Litteral shorcut notation
+#### Litteral shorcut notation
 These are synonyms
 
 - as root 
 	- sudo command ...
-	- # command ...
+	- \# command ...
 - as logged in user
 	- command (and explaining context that emphasize it is a shell invoked command)
 	- $ command
 
-Explanations by result, by use of following function
+explanations by result, by use of:
  
 	function lscat
 	{
@@ -20,19 +20,19 @@ Explanations by result, by use of following function
 		echo 
 	}
 
-## root password
+### root password
 
 	$ sudo -i
-	# passwd
-	# exit
+	\# passwd
+	\# exit
 
 file ~/.sudo_as_admin_successful is keept to avoid beeing info-ed on every terminal opening.
 
-## getting midnight commander
+### getting midnight commander
 
 	# apt-get mc
 
-## [screen resolution](http://ubuntuhandbook.org/index.php/2017/04/custom-screen-resolution-ubuntu-desktop/)
+### [screen resolution](http://ubuntuhandbook.org/index.php/2017/04/custom-screen-resolution-ubuntu-desktop/)
 Identify display device name
 
 	$ xrandr
@@ -49,9 +49,9 @@ Getting a modeline for wanted resolution - eg. 1280 wide(x) and 1024 high(y)
 
 Add to Application->settings->sessions and startup
 
-## [ethernet static ip address](https://www.techrepublic.com/article/how-to-configure-a-static-ip-address-in-ubuntu-server-18-04/)
+### [ethernet static ip address](https://www.techrepublic.com/article/how-to-configure-a-static-ip-address-in-ubuntu-server-18-04/)
 
-	~# lscat /etc/netplan/01-netcfg.yaml 
+	\# lscat /etc/netplan/01-netcfg.yaml 
 	perm= -rw-r--r-- owner= root group= root
 		 network:
 		   version: 2
@@ -61,13 +61,13 @@ Add to Application->settings->sessions and startup
 		       addresses: [192.168.0.3/24]
 
 
-	# netplan apply
+	\# netplan apply
 
-## setup files, logged in user
+### setup files, logged in user
 
 	$ tail ~/.bashrc
 	export PATH=/home/bvirk/bin:$PATH
-	export EDITOR=/usr/local/bin/mousepadWA
+	export EDITOR=jedit
 	alias mc='mc -b'
 	function lscat
 	{
@@ -77,16 +77,16 @@ Add to Application->settings->sessions and startup
 	echo 
 	}
 
-## [workaround - free console under mc](https://unix.stackexchange.com/questions/182925/dconf-warning-failed-to-commit-changes-to-dconf-the-connection-is-closed)
+### [workaround - free console under mc](https://unix.stackexchange.com/questions/182925/dconf-warning-failed-to-commit-changes-to-dconf-the-connection-is-closed)
 	
 	p$ lscat /usr/local/bin/mousepadWA 
 	perm= -rwxr-xr-x owner= root group= root
 		 /usr/bin/mousepad $1 >/dev/null 2>&1 &
 
 
-## setup files, root
+### setup files, root
 
-	# tail ~/.bashrc
+	\# tail ~/.bashrc
 	export EDITOR=/usr/local/bin/mousepadWA
 	alias mc='mc -b'
 	function lscat
@@ -97,7 +97,7 @@ Add to Application->settings->sessions and startup
 	echo 
 	}
 
-## costumize mc 
+### costumize mc 
 
 - left|right->listing mode...
 	- user defined: half type name|owner|group|mtime|perm
@@ -113,20 +113,21 @@ Add to Application->settings->sessions and startup
 - option save setup
 	- IMPORTANT TO KEEP SETTINGS
 
-## hints to identify desktop gui items in Applications
+### hints to identify desktop gui items in Applications
 
 - menues in top of screen
 	- settings->panel-items
 		- workspace switcher
 
-## [installing apache, mysql, php](https://www.configserverfirewall.com/ubuntu-linux/install-apache-php-mysql-ubuntu-18/)
+### [installing apache, mysql, php](https://www.configserverfirewall.com/ubuntu-linux/install-apache-php-mysql-ubuntu-18/)
 
 	...
-	head -n 2 /etc/apache2/apache2.conf 
+	# head -n 3 /etc/apache2/apache2.conf 
 	## added 20200618
 	Include /etc/phpmyadmin/apache.conf 
+	ServerName localhost
 
-## [add mysql user](https://alvinalexander.com/blog/post/mysql/add-user-mysql/)
+### [add mysql user](https://alvinalexander.com/blog/post/mysql/add-user-mysql/)
 user: 'til' with password 'tilpas' is given database 'tilladt'
 
 - login as mysql user root
