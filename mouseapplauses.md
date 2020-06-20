@@ -81,8 +81,7 @@ Add to Application->settings->sessions and startup
 	
 	p$ lscat /usr/local/bin/mousepadWA 
 	perm= -rwxr-xr-x owner= root group= root
-		 /usr/bin/mousepad $1 >/dev/null 2>&1 &
-
+		/usr/bin/mousepad $1 >/dev/null 2>&1 &
 
 ### setup files, root
 
