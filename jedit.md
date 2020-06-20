@@ -5,10 +5,13 @@
 - console options
 	- general
 		- -show startup message
-	
 - errorlist
-
-#### Opening in workspace 1 as the limitted to one instance freeing the invoking terminal 
+- spell check
+	- ensure aspell installed
+	- option general
+		- select Aspell, refresh and chose language
+		
+#### Opening jedit in workspace 1 _and_ limit to one instance _and_ freeing the invoking terminal 
 
 	# tail -n 2 /usr/share/jedit/jedit.sh 
 	wmctrl -s0
@@ -33,7 +36,7 @@
 	- CONTEXT_MENU	cyberkiss
 	- C+s			gitcommit-a-mSelected
 
-#### macro costumation
+#### macro customisation
 	- cyberkiss
 		- jedit api which wasn't part of apt jedit installation
 			- copied using scp to /usr/share/doc/jedit/api/
@@ -42,7 +45,7 @@
 		- requirement for bash script jimport
 			- gettting rt.jar
 				- sudo apt-get install openjdk-8-jre
-			- put jimport in path
+			- put jimport in path (see below what jimport is)
 
 #### bash script jimport for use with macro cyberkiss
 
